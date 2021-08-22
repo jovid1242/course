@@ -1,9 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import Sidebar from '../components/Sidebar.js' 
-import Courses from '../components/Courses.js' 
+import LessonComponent from '../components/Lesson.js'
 
-const Index = () => {
+const lesson = () => {
     return (
         <>
         <Head>
@@ -13,10 +13,10 @@ const Index = () => {
         </Head>
             <Sidebar />
             <section className="home-section">
-                <Courses />
+                <LessonComponent />
             </section>
         </>
     );
 }
 
-export default Index;
+export default lesson;
