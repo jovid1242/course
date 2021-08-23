@@ -1,5 +1,6 @@
 import React, { useState }  from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
+import ReactPlayer from 'react-player'
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import styles from '../styles/Lesson.module.scss';
@@ -7,7 +8,8 @@ import styles from '../styles/Lesson.module.scss';
 import SwiperCore, {
     Pagination
   } from 'swiper/core';
-  SwiperCore.use([Pagination]);
+  
+SwiperCore.use([Pagination]);
 
 export default function Lesson() {
     const lessonData = [
@@ -54,7 +56,12 @@ export default function Lesson() {
                                                 {el.title}
                                             </p>
                                             <div className={styles.lesson_video}>
-
+                                            <ReactPlayer 
+                                                url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                                                width="100%"
+                                                height="100%"
+                                                controls={false}
+                                             />
                                             </div>
                                             <div className={styles.translation_btns}>
                                                 <div className={styles.eng_btn}>
