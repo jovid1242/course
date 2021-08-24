@@ -57,7 +57,7 @@ export default function Lesson() {
                                             </p>
                                             <div className={styles.lesson_video}>
                                             <ReactPlayer 
-                                                url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                                                url='https://www.youtube.com/watch?v=DiJzNNewpXA&list=RDDiJzNNewpXA&start_radio=1'
                                                 width="100%"
                                                 height="100%"
                                                 controls={false}

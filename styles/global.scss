@@ -8,6 +8,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 ul {
   margin: 0 !important;
   padding: 0 !important;
@@ -273,8 +274,61 @@ ul {
   }
 }
 
+.mobile__tabbar {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
+  .mobile__tabbar {
+    z-index: 9;
+    width: 100%;
+    position: fixed;
+    display: block;
+    bottom: 0;
+    background: #f3f3f3;
+    .tab_list {
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .activeTab {
+        // position: absolute;
+        // width: 40px;
+        // height: 40px;
+        border-radius: 50%;
+        transform: translateY(-9px);
+        transition: 0.4s ease-in-out;
+        background: #f3f3f3;
+        box-shadow: 0px -13px 14px #dedede7d;
+        border-radius: 50%;
+        // top: 20px;
+      }
+      li {
+        list-style: none;
+        padding: 20px;
+        transition: 0.4s ease-in-out;
+        border-radius: 50%;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          svg path {
+            stroke: #b3b3b3;
+          }
+          svg polyline {
+            stroke: #b3b3b3;
+          }
+          svg line {
+            stroke: #b3b3b3;
+          }
+          svg circle {
+            stroke: #b3b3b3;
+          }
+        }
+      }
+    }
+  }
   .sidebar {
+    display: none;
     right: 0;
     left: auto;
     top: 0;
