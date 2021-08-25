@@ -278,39 +278,46 @@ ul {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  .home-section {
+    background: #ffff;
+  }
   .mobile__tabbar {
     z-index: 9;
     width: 100%;
     position: fixed;
     display: block;
     bottom: 0;
-    background: #f3f3f3;
+    background: #e8e8e8;
     .tab_list {
       position: relative;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      .activeTab {
-        // position: absolute;
-        // width: 40px;
-        // height: 40px;
-        border-radius: 50%;
-        transform: translateY(-9px);
-        transition: 0.4s ease-in-out;
-        background: #f3f3f3;
-        box-shadow: 0px -13px 14px #dedede7d;
-        border-radius: 50%;
-        // top: 20px;
-      }
       li {
         list-style: none;
-        padding: 20px;
+        padding: 10px;
         transition: 0.4s ease-in-out;
         border-radius: 50%;
+
+        .game_icon {
+          svg {
+            width: 50px;
+            path {
+              stroke: #b3b3b3;
+              fill: #b3b3b3;
+            }
+          }
+        }
         a {
           text-decoration: none;
           text-transform: uppercase;
+          svg {
+            width: 70px;
+            path {
+              // fill: #b3b3b3;
+            }
+          }
           svg path {
             stroke: #b3b3b3;
           }
@@ -325,7 +332,39 @@ ul {
           }
         }
       }
+      li:hover {
+        transition: 0.4s ease-in-out;
+        svg path {
+          stroke: #37bbb4;
+          transition: 0.4s ease-in-out;
+        }
+        svg polyline {
+          transition: 0.4s ease-in-out;
+          stroke: #37bbb4;
+        }
+        svg line {
+          transition: 0.4s ease-in-out;
+          stroke: #37bbb4;
+        }
+        svg circle {
+          transition: 0.4s ease-in-out;
+          stroke: #37bbb4;
+        }
+      }
     }
+  }
+
+  .activeTab {
+    // position: absolute;
+    // width: 40px;
+    // height: 40px;
+    // border-radius: 50%;
+    // transform: translateY(-9px);
+    // transition: 0.4s ease-in-out;
+    // background: #f3f3f3;
+    // box-shadow: 0px -13px 14px #e8e8e8;
+    // border-radius: 50%;
+    // top: 20px;
   }
   .sidebar {
     display: none;

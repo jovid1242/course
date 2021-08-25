@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Sidebar from '../components/Sidebar.js' 
-import Home from '../components/Home.js' 
+import Courses from '../components/Courses.js' 
 
 const Index = () => {
     return (
@@ -13,7 +13,7 @@ const Index = () => {
         </Head>
             <Sidebar />
             <section className="home-section">
-                <Home />
+                <Courses />
             </section>
         </>
     );

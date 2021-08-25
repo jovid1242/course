@@ -1,0 +1,124 @@
+.header {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    position: fixed;
+    padding: 0 15px 0 10px;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      color: #5e5e5e;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: "Montserrat Alternates", sans-serif;
+    }
+  }
+  .main {
+    padding-top: 50px;
+    width: 100%;
+    height: 900px;
+    .head__colection {
+      width: 100%;
+      padding: 15px 10px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        color: #5e5e5e;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(28, 153, 224);
+      }
+    }
+
+    .slide_cont {
+      width: 150px;
+      padding: 0 0 0 10px;
+      .img_slide {
+        img {
+          border-radius: 14px;
+          width: 150px;
+          height: 200px;
+          object-fit: cover;
+          transition: 0.4s ease-in-out;
+        }
+        img:hover {
+          transition: 0.4s ease-in-out;
+          filter: brightness(70%);
+        }
+      }
+      p {
+        font-size: 14px;
+        color: rgb(139, 139, 139);
+      }
+      span {
+        font-size: 16px;
+      }
+    }
+    .colection__wrapper {
+      width: 100%;
+    }
+    .colection_slide {
+      width: 300px;
+      padding: 0 10px;
+      .colection_img_slide {
+        position: relative;
+        span {
+          position: absolute;
+          z-index: 2;
+          color: #ffff;
+          left: 15px;
+          top: 15px;
+          font-size: 18px;
+          font-weight: 600;
+        }
+        img {
+          border-radius: 14px;
+          width: 300px;
+          height: 150px;
+          object-fit: cover;
+          transition: 0.4s ease-in-out;
+          filter: brightness(80%);
+        }
+        img:hover {
+          transition: 0.4s ease-in-out;
+          filter: brightness(70%);
+        }
+      }
+    }
+    .stories__slide {
+      width: 200px;
+      padding: 0 10px;
+      .stories__img_slide {
+        position: relative;
+        span {
+          position: absolute;
+          z-index: 2;
+          color: #ffff;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 14px;
+          text-align: center;
+          font-weight: 600;
+        }
+        img {
+          border-radius: 14px;
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          filter: brightness(60%);
+        }
+      }
+    }
+  }
+}
