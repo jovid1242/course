@@ -1,0 +1,106 @@
+.login__wrapper {
+  width: 400px;
+  margin: 0 auto;
+  .login__header {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    .l_img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      flex-direction: column;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    span {
+      font-size: 26px;
+      text-align: center;
+      font-weight: bold;
+      color: rgb(66, 66, 66);
+    }
+    p {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(155, 155, 155);
+    }
+  }
+  .login__main {
+    margin-top: 40px;
+    width: 100%;
+    padding: 25px;
+    .l_email {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      svg {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        margin: 0 15px 30px 20px;
+        path {
+          fill: #01ba76;
+        }
+      }
+    }
+    p {
+      float: right;
+      font-weight: bold;
+      color: #01ba76;
+      margin-bottom: 30px;
+      margin: 40px 0 40px 0;
+    }
+    button {
+      width: 100%;
+      height: 50px;
+      border: none;
+      border-radius: 8px;
+      background: #01ba76;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+    }
+    input {
+      width: 100%;
+      height: 50px;
+      outline: none;
+      margin-bottom: 30px;
+      border: none;
+      border-radius: 8px;
+      padding: 0 60px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #01ba76;
+      &::placeholder {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      &:hover {
+        box-shadow: 9px 5px 9px #a1a1a154;
+      }
+    }
+  }
+  .login__footer {
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    span {
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: #01ba76;
+      }
+    }
+  }
+}

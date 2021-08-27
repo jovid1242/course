@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image' 
 import styles from '../../styles/Home.module.scss'
-import { Swiper, SwiperSlide } from "swiper/react";
+import Swiper from 'react-id-swiper';  
 import "swiper/swiper.min.css";  
 
 import imgb5 from '../../assets/img/5.jpg'
@@ -10,6 +10,34 @@ import imgb7 from '../../assets/img/7.jpg'
 import imgb8 from '../../assets/img/4-4-6.jpg'
 
 export default function Colection() {
+
+    const params = {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        // pagination: {
+        //   el: '.swiper-pagination',
+        //   clickable: true
+        // },
+        breakpoints: {
+          1024: {
+            slidesPerView: 4, 
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          320: {
+            slidesPerView: 2,
+            width: 280,
+            spaceBetween: 50
+          }
+        }
+      }
 
     const slider_r = [
         {
@@ -25,7 +53,7 @@ export default function Colection() {
           text: 'Фантастика'
         },
         {
-          img: imgb7,
+          img: imgb6,
           text: 'Детские книги для взрослых'
         }
     ]
@@ -38,23 +66,22 @@ export default function Colection() {
                     {/* <Link href="#">Ещё</Link> */}
                 </div>
                 <div> 
-                    <Swiper slidesPerView={3} spaceBetween={70} className="mySwiper">
-                    {
-                        slider_r?.map((el,index) => {
+                <Swiper {...params}>
+                            {
+                                slider_r?.map((el,index) => {
                             return (
-                                <SwiperSlide key={index}>
-                                <div className={styles.stories__slide}>
-                                    <div className={styles.stories__img_slide}>
-                                        <span>{el.text}</span>
-                                        <Image src={el.img} alt="imgb" /> 
+                                <div key={index}>
+                                    <div className={styles.stories__slide}>
+                                        <div className={styles.stories__img_slide}>
+                                            <span>{el.text}</span>
+                                            <Image src={el.img} alt="imgb" /> 
+                                        </div>
                                     </div>
-                                </div>
-                            </SwiperSlide>  
-                            )
-                        })
-                    }  
-                        <SwiperSlide></SwiperSlide>                              
-                    </Swiper>
+                                </div>  
+                                )
+                            })
+                            }                           
+                </Swiper>
                 </div>
             </div>
         </>

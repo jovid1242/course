@@ -278,7 +278,26 @@ ul {
   display: none;
 }
 
+.rodal-dialog {
+  border-radius: 14px !important;
+  width: 50% !important;
+  height: 500px !important;
+  // bottom: 0 !important;
+}
+
 @media only screen and (max-width: 768px) {
+  .modal__h80 {
+    .rodal-dialog {
+      top: auto !important;
+      margin: 0 !important;
+      border-radius: 14px !important;
+      width: 100.5% !important;
+      height: 75vh !important;
+      margin-bottom: 50px !important;
+      overflow: scroll !important;
+      // bottom: 0 !important;
+    }
+  }
   .home-section {
     background: #ffff;
   }
@@ -291,18 +310,19 @@ ul {
     background: #e8e8e8;
     .tab_list {
       position: relative;
+      height: 50px;
       display: flex;
       justify-content: space-around;
       align-items: center;
       li {
         list-style: none;
-        padding: 10px;
+        padding: 0;
         transition: 0.4s ease-in-out;
         border-radius: 50%;
 
         .game_icon {
           svg {
-            width: 50px;
+            width: 35px;
             path {
               stroke: #b3b3b3;
               fill: #b3b3b3;
@@ -312,10 +332,11 @@ ul {
         a {
           text-decoration: none;
           text-transform: uppercase;
-          svg {
-            width: 70px;
+          .svg__course_icon {
+            width: 35px !important;
             path {
-              // fill: #b3b3b3;
+              // stroke: #b3b3b3 !impo.rtant;
+              fill: #b3b3b3;
             }
           }
           svg path {
