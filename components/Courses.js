@@ -58,19 +58,21 @@ export default function Courses() {
                             cours?.map((el , index) => {
                                 return (
                                     <div className="col-md-3" key={index}>
-                                    <div className={styles.course_wrapper__card} style={{background: `linear-gradient(270deg,rgba(13, 177, 177, 0.596), rgba(2, 8, 7, 0.6) ), url(${randomImg()})`}} >
-                                        <div className={styles.card__img}>
-                                        <p className={styles.card__text}>{el.title}</p>
-                                            <Image src={el.img} alt="Picture of the author" />
-                                        </div>                                        
-                                        <span>{el.text.substr(0, 180) + '...'}</span>
-                                        <div className="">
-                                        <button className={styles.start_course}>
-                                           <Link href={`/course/${el.id}`}>
-                                            20 Уроков
-                                           </Link>
-                                        </button>
-                                        </div>
+                                    <div className={styles.course_wrapper__card} style={{background: `linear-gradient(270deg,rgba(13, 177, 177, 0.596), rgba(2, 8, 7, 0.6) ), url(${randomImg()})`}} >   
+                                        <Link href={`/course/${el.id}`}>
+                                            <a>
+                                            <div className={styles.card__img}>
+                                                <p className={styles.card__text}>{el.title}</p>
+                                                <Image src={el.img} alt="Picture of the author" />
+                                            </div>                                        
+                                            <span>{el.text.substr(0, 180) + '...'}</span>
+                                            <div className="">
+                                                <button className={styles.start_course}>
+                                                    20 Уроков
+                                                </button>
+                                            </div>  
+                                            </a>                                      
+                                        </Link>
                                     </div>
                                 </div> 
                                 )

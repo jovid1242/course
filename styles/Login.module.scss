@@ -9,8 +9,8 @@
     align-self: center;
     flex-direction: column;
     .l_img {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -88,9 +88,9 @@
         font-size: 18px;
         font-weight: bold;
       }
-      &:hover {
-        box-shadow: 9px 5px 9px #a1a1a154;
-      }
+      // &:hover {
+      //   box-shadow: 9px 5px 9px #a1a1a154;
+      // }
     }
   }
   .login__footer {
