@@ -2,7 +2,7 @@
   width: 400px;
   margin: 0 auto;
   .login__header {
-    margin-top: 20px;
+    padding-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -38,24 +38,29 @@
     margin-top: 40px;
     width: 100%;
     padding: 25px;
+    .l_email_content,
     .l_email {
+      position: relative;
+      width: 100%;
+      // position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 15px;
       svg {
         position: absolute;
+        left: 0;
         width: 30px;
         height: 30px;
-        margin: 0 15px 30px 20px;
         path {
-          fill: #01ba76;
+          fill: #37bbb4;
         }
       }
     }
     p {
       float: right;
       font-weight: bold;
-      color: #01ba76;
+      color: #37bbb4;
       margin-bottom: 30px;
       margin: 40px 0 40px 0;
     }
@@ -64,7 +69,7 @@
       height: 50px;
       border: none;
       border-radius: 8px;
-      background: #01ba76;
+      background: #37bbb4;
       font-size: 18px;
       font-weight: bold;
       color: #fff;
@@ -73,13 +78,12 @@
       width: 100%;
       height: 50px;
       outline: none;
-      margin-bottom: 30px;
       border: none;
       border-radius: 8px;
-      padding: 0 60px;
+      padding: 0 0 0 40px;
       font-size: 16px;
       font-weight: bold;
-      color: #01ba76;
+      color: #37bbb4;
       &::placeholder {
         font-size: 18px;
         font-weight: bold;
@@ -99,7 +103,7 @@
         text-decoration: none;
         font-size: 16px;
         font-weight: bold;
-        color: #01ba76;
+        color: #37bbb4;
       }
     }
   }
