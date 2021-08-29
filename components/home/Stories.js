@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image' 
 import styles from '../../styles/Home.module.scss'
 import Swiper from 'react-id-swiper';  
-import "swiper/swiper.min.css";  
+import "swiper/swiper.min.css"; 
+
+import Modal from './Modal'; 
 
 import imgb5 from '../../assets/img/5.jpg'
 import imgb6 from '../../assets/img/6.jpg'
@@ -39,28 +41,52 @@ export default function Colection() {
         }
       }
 
-    const slider_r = [
-        {
-          img: imgb7,
-          text: 'Книжный оскар'
-        },
+    const category = [
+      {
+        img: imgb7,
+        title: 'великий гэтсби',
+        author: 'F.Scott fitzgerald',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores!'
+      },
         {
           img: imgb5,
-          text: 'Нон-фикшн'
+          title: 'Чацка по имени джонатан',
+          author: 'Richard Bach',
+          text: 'Чацка по имени джонатан'
         },
         {
           img: imgb8,
-          text: 'Фантастика'
+          title: 'о дивный новый мир',
+          author: 'aldous Huxly',
+          text: 'о дивный новый мир'
         },
         {
           img: imgb6,
-          text: 'Детские книги для взрослых'
+          title: 'Richard Bach',
+          author: 'Richard Bach',
+          text: 'алиса в стране чудес'
         }
-    ]
+    ] 
+
+  const [modal , setModal] = useState({
+      visible: false
+  })
+
+  const [mData, setMData] = useState([])
+
+  const hide = () =>  {
+      setModal({ visible: false });
+  }
+
+  const show = el => {
+      setModal({visible: true});
+      setMData(el)
+  }
  
     return (
         <>
             <div className="stories___wrapper">
+            <Modal show={modal.visible} hide={hide} data={mData} />
                 <div className={styles.head__colection}>
                     <span>Рассказы</span>
                     {/* <Link href="#">Ещё</Link> */}
@@ -68,12 +94,12 @@ export default function Colection() {
                 <div> 
                 <Swiper {...params}>
                             {
-                                slider_r?.map((el,index) => {
+                              category?.map((el,index) => {
                             return (
                                 <div key={index}>
-                                    <div className={styles.stories__slide}>
+                                    <div className={styles.stories__slide} onClick={() => show(el)}>
                                         <div className={styles.stories__img_slide}>
-                                            <span>{el.text}</span>
+                                            <span>{el.title}</span>
                                             <Image src={el.img} alt="imgb" /> 
                                         </div>
                                     </div>

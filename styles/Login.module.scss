@@ -25,28 +25,35 @@
       font-size: 26px;
       text-align: center;
       font-weight: bold;
-      color: rgb(66, 66, 66);
+      color: #37bbb4;
     }
     p {
       text-align: center;
       font-size: 18px;
       font-weight: bold;
-      color: rgb(155, 155, 155);
+      color: #37bbb4;
     }
   }
   .login__main {
-    margin-top: 40px;
+    margin-top: 20px;
     width: 100%;
     padding: 25px;
     .l_email_content,
     .l_email {
       position: relative;
       width: 100%;
-      // position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 15px;
+      .eyes {
+        position: absolute;
+        left: 90%;
+        path {
+          // stroke: #37bbb4;
+          fill: #37bbb4;
+        }
+      }
       svg {
         position: absolute;
         left: 0;
@@ -62,7 +69,7 @@
       font-weight: bold;
       color: #37bbb4;
       margin-bottom: 30px;
-      margin: 40px 0 40px 0;
+      margin: 30px 0 30px 0;
     }
     button {
       width: 100%;
@@ -73,6 +80,7 @@
       font-size: 18px;
       font-weight: bold;
       color: #fff;
+      margin-top: 15px;
     }
     input {
       width: 100%;
@@ -84,6 +92,7 @@
       font-size: 16px;
       font-weight: bold;
       color: #37bbb4;
+      border-bottom: 1px solid #37bbb4;
       &::placeholder {
         font-size: 18px;
         font-weight: bold;

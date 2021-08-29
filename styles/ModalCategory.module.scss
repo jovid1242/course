@@ -2,10 +2,10 @@
   .modal__wrapper {
     width: 100%;
     .box1 {
-      width: 100%;
       padding: 40px 0;
       .modal_c_img {
         position: relative;
+        max-width: 100%;
         span {
           position: absolute;
           z-index: 2;
@@ -16,7 +16,7 @@
           font-weight: 600;
         }
         img {
-          width: 400px;
+          width: 100em;
           height: 200px;
           object-fit: cover;
           border-radius: 8px;
@@ -40,7 +40,7 @@
           object-fit: cover;
         }
         .list_cat_info {
-          width: 70%;
+          width: 60%;
           p {
             font-size: 14px;
             color: rgb(129, 129, 129);
