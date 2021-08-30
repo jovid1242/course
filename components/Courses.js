@@ -57,7 +57,7 @@ export default function Courses() {
                         {
                             cours?.map((el , index) => {
                                 return (
-                                    <div className="col-md-3" key={index}>
+                                    <div className="col-md-3 rellax" data-rellax-speed="10" key={index}>
                                     <div className={styles.course_wrapper__card} style={{background: `linear-gradient(270deg,rgba(13, 177, 177, 0.596), rgba(2, 8, 7, 0.6) ), url(${randomImg()})`}} >   
                                         <Link href={`/course/${el.id}`}>
                                             <a>

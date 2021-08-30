@@ -29,8 +29,9 @@ export default function Modal({show, hide, data}) {
                                 </div>
                             </div>
                             <div className={styles.modal__btns}>
-                                <Link href="https://t.me/seniortutorials/181">
-                                    <a>
+                            {/* https://drive.google.com/file/d/1fT45dPykTx0lr0VGf1IzJcOGH2xh3KaZ/view?usp=sharing */}
+                                <Link href="https://drive.google.com/file/d/1fT45dPykTx0lr0VGf1IzJcOGH2xh3KaZ/view?usp=sharing" download>
+                                    <a download>
                                         <button>Скачать</button>
                                     </a>
                                 </Link>

@@ -1,102 +1,174 @@
 .cours_wrapper {
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 25%;
+  background: url("https://oboi.ringtonz.ru/uploads/posts/2020-04/1586227331_doroga_gory_les_144208_1440x2560.jpg")
+    no-repeat center center/cover;
 }
-.card_cours {
-  width: 100%;
-  height: 400px;
-  position: relative;
+
+.card_cours_r {
+  width: 100% !important;
+  height: 200px !important;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0px 2px 17px #e6e6e6;
-  margin-bottom: 25px;
-  .font1 {
-    position: absolute;
-    top: -50px;
-    right: -20px;
-    width: 200px;
-    height: 200px;
-    background: rgb(9, 197, 188);
-    border-radius: 34% 66% 65% 35% / 66% 46% 54% 34%;
-    opacity: 0.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  .wrapper_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    margin-right: 30px;
   }
-  .font2 {
-    position: absolute;
-    top: -100px;
-    right: 25px;
-    width: 300px;
-    height: 300px;
-    background: rgb(197, 9, 119);
-    border-radius: 57% 43% 54% 46% / 38% 73% 27% 62%;
-    opacity: 0.8;
+  .wrapper_content_img {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(180, 180, 180);
+    border-radius: 50%;
+    margin-bottom: 5px;
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
   }
-  .card_cours__title {
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    font-size: 36px;
+  a {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    text-decoration: none;
     color: #fff;
-    font-weight: 900;
-    font-family: sans-serif;
-    opacity: 1;
-    z-index: 3;
-    margin: 0;
   }
-  .card_cours__text {
-    position: absolute;
-    bottom: 70px;
-    text-align: center;
-    padding: 0 20px;
-    font-size: 14px;
-    font-weight: normal;
-    font-family: "Montserrat Alternates", sans-serif;
-    color: rgb(57, 84, 92);
-    font-weight: 500;
-    opacity: 1;
-    z-index: 3;
-    margin: 0;
+}
+
+.card_cours_l {
+  width: 100% !important;
+  height: 200px !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  .wrapper_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    margin-left: 30px;
   }
-  .card_cours__btn {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0 20px;
-    opacity: 1;
-    z-index: 3;
-    margin: 0;
-    button {
-      outline: none !important;
-      border-radius: 5px;
-      border: none;
-      width: 100px;
-      height: 35px;
-      background: rgb(197, 9, 119);
-      color: #fff;
-      font-size: 18px;
-      font-weight: 500;
-      a {
-        text-decoration: none !important;
-        color: #fff;
-      }
+  .wrapper_content_img {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(180, 180, 180);
+    border-radius: 50%;
+    margin-bottom: 5px;
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
     }
-    button:hover {
-      transition: all 0.5s ease-in-out;
-      box-shadow: 0 2px 18px rgba(206, 206, 206, 0.747);
-    }
+  }
+  a {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .card_cours {
+  .cours_wrapper {
+    width: 100%;
+    padding: 50px 0 0 0;
+    background: url("https://oboi.ringtonz.ru/uploads/posts/2020-04/1586227331_doroga_gory_les_144208_1440x2560.jpg")
+      no-repeat center center/cover;
+  }
+  .card_cours_r {
     width: 100% !important;
-    .card_cours__btn button {
-      width: 150px;
-      height: 45px;
+    height: 200px !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    .wrapper_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      margin-right: 30px;
     }
-    .card_cours__text {
-      bottom: 100px;
+    .wrapper_content_img {
+      width: 150px;
+      height: 150px;
+      background-color: rgb(180, 180, 180);
+      border-radius: 50%;
+      margin-bottom: 5px;
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+    }
+    a {
+      width: 130px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .card_cours_l {
+    width: 100% !important;
+    height: 200px !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .wrapper_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      margin-left: 30px;
+    }
+    .wrapper_content_img {
+      width: 150px;
+      height: 150px;
+      background-color: rgb(180, 180, 180);
+      border-radius: 50%;
+      margin-bottom: 5px;
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+    }
+    a {
+      width: 130px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #fff;
     }
   }
 }
