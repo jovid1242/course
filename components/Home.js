@@ -24,8 +24,8 @@ export default function Home() {
         // },
         breakpoints: {
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 40
+            slidesPerView: 6, 
+            spaceBetween: 20
           },
           768: {
             slidesPerView: 3,
@@ -67,7 +67,31 @@ export default function Home() {
             title: 'Richard Bach',
             author: 'Richard Bach',
             text: 'алиса в стране чудес'
-          }
+          },
+          {
+            img: imgb2,
+            title: 'великий гэтсби',
+            author: 'F.Scott fitzgerald',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores!'
+          },
+            {
+              img: imgb,
+              title: 'Чацка по имени джонатан',
+              author: 'Richard Bach',
+              text: 'Чацка по имени джонатан'
+            },
+            {
+              img: imgb3,
+              title: 'о дивный новый мир',
+              author: 'aldous Huxly',
+              text: 'о дивный новый мир'
+            },
+            {
+              img: imgb4,
+              title: 'Richard Bach',
+              author: 'Richard Bach',
+              text: 'алиса в стране чудес'
+            }
       ] 
 
     const [modal , setModal] = useState({

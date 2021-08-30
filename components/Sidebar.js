@@ -30,18 +30,22 @@ const Sidebar = () => {
         </Head>
          
                 <div className={!sidebar ? "sidebar" : "sidebar open"}>
-                <div className="logo-details">
-                <i className='bx bxl-c-plus-plus icon'></i>
-                    <div className="logo_name">Course</div>
-                    <i className='bx bx-menu' onClick={() => toggleSidebar()} id="btn" ></i>
-                </div>
+                    <div className="logo-details">                    
+                    <i className='bx bxl-c-plus-plus icon'></i>
+                        <Link  href="/">
+                            <a>
+                                <div className="logo_name">Course</div>                                
+                            </a>
+                        </Link>
+                        <i className='bx bx-menu' onClick={() => toggleSidebar()} id="btn" ></i>
+                    </div>
                 <ul className="nav-list">
                 <li>
                     <i className='bx bx-search' ></i>
                     <input type="text" placeholder="Search..." />
                 </li>
                 <li>
-                <Link  href="/">
+                <Link  href="/courses">
                     <a>
                     <i className='bx bx-grid-alt'></i>
                     <span className="links_name">Курсы</span>
