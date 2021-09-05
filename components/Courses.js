@@ -36,6 +36,7 @@ export default function Courses({courses}) {
                                                 alt="Picture of the author"
                                                 width={500}
                                                 height={500}
+                                                crossOrigin
                                             />
                                             </div>                                        
                                             <span>{el.name.substr(0, 180) + '...'}</span>
