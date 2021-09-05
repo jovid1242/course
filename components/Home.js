@@ -113,7 +113,7 @@ export default function Home() {
         <>
             <div className={styles.header}>
                 <span>
-                    Site name
+                    Delphi School
                 </span>
                 <Link href="/search"><Image src={searchIcon} alt="search" /></Link>
             </div>

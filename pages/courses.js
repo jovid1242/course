@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Sidebar from '../components/Sidebar.js' 
 import Courses from '../components/Courses.js'  
 
-const Index = () => {
+const Index = (props) => {
     return (
         <>
         <Head>
@@ -13,10 +13,21 @@ const Index = () => {
         </Head>
             <Sidebar />
             <section className="home-section">
-                <Courses />
+                <Courses courses={props.data.courses} />
             </section>
         </>
     );
 }
 
 export default Index;
+
+
+export async function getStaticProps(context) {
+    // let data = []
+    const response = await fetch('https://englishapi.delphi.school/api/course');
+    const data  = await response.json()
+    return {
+      props: {data}, // will be passed to the page component as props
+    }
+}
+

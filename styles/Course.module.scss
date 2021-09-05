@@ -1,5 +1,6 @@
 .cours_wrapper {
   width: 100%;
+  min-height: 100vh;
   padding: 50px 25%;
   background: url("https://oboi.ringtonz.ru/uploads/posts/2020-04/1586227331_doroga_gory_les_144208_1440x2560.jpg")
     no-repeat center center/cover;
@@ -121,8 +122,9 @@
       }
     }
     a {
-      width: 130px;
+      width: 240px;
       height: 40px;
+      margin-right: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -161,12 +163,13 @@
       }
     }
     a {
-      width: 130px;
+      width: 240px;
       height: 40px;
+      margin-left: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 30px;
+      border-radius: 55px;
       text-decoration: none;
       color: #fff;
     }
