@@ -9,5 +9,6 @@ module.exports = {
   }, 
   images: {
     domains: ['storage.appewa.com', 'englishadminapi.delphi.school'],
-  }
+  },
+  crossOrigin: 'anonymous'
 }
