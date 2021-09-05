@@ -30,18 +30,22 @@ const Sidebar = () => {
         </Head>
          
                 <div className={!sidebar ? "sidebar" : "sidebar open"}>
-                <div className="logo-details">
-                <i className='bx bxl-c-plus-plus icon'></i>
-                    <div className="logo_name">Course</div>
-                    <i className='bx bx-menu' onClick={() => toggleSidebar()} id="btn" ></i>
-                </div>
+                    <div className="logo-details">                    
+                    <i className='bx bxl-c-plus-plus icon'></i>
+                        <Link  href="/">
+                            <a>
+                                <div className="logo_name">Course</div>                                
+                            </a>
+                        </Link>
+                        <i className='bx bx-menu' onClick={() => toggleSidebar()} id="btn" ></i>
+                    </div>
                 <ul className="nav-list">
                 <li>
                     <i className='bx bx-search' ></i>
                     <input type="text" placeholder="Search..." />
                 </li>
                 <li>
-                <Link  href="/">
+                <Link href="/courses">
                     <a>
                     <i className='bx bx-grid-alt'></i>
                     <span className="links_name">Курсы</span>
@@ -75,7 +79,7 @@ const Sidebar = () => {
                         </a>
                     </li>
                     <li>
-                        <Link href="/login">
+                        <Link href="/">
                             <a>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="nav-item__icon">
                                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
