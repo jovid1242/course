@@ -85,8 +85,8 @@ export default function Home({book , film}) {
                                                 <div className={styles.img_slide} style={{background: `url(${el.image})`}}>
                                                     {/* <Image src={el.img} alt="imgb" /> */}
                                                 </div>
-                                                <p>{el.author.substr(0, 18)}</p>
-                                                <span>{el.name.substr(0, 18)}</span>
+                                                <p>{el.author.substr(0, 15)}</p>
+                                                <span>{el.name.substr(0, 15)}</span>
                                             </div>
                                         </div>  
                                     )
