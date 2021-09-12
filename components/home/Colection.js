@@ -65,7 +65,7 @@ export default function Colection({films}) {
             <div className="colection__wrapper">
             <ModalCategory show={modal.visible} hide={hide} data={mData} showM={showM} />
                 <div className={styles.head__colection}>
-                    <span>Коллекции</span>
+                    <span>Фильмы</span>
                     {/* <Link href="#">Ещё</Link> */}
                 </div>
                 <div> 
