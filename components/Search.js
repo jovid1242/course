@@ -5,61 +5,8 @@ import Modal from './home/Modal.js'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import searchIcon from '../assets/icon/search.svg'
-import imgb from '../assets/img/pic_l_min.jpg'
-import imgb2 from '../assets/img/2.jpg'
-import imgb3 from '../assets/img/3.jpg'
-import imgb4 from '../assets/img/4.jpg'
+const Search = ({book}) => {
 
-
-const Search = () => {
-
-    const arr = [
-        {
-          img: imgb2,
-          title: 'великий гэтсби',
-          author: 'F.Scott fitzgerald',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores!'
-        },
-          {
-            img: imgb,
-            title: 'Чацка по имени джонатан',
-            author: 'Richard Bach',
-            text: 'Чацка по имени джонатан'
-          },
-          {
-            img: imgb3,
-            title: 'о дивный новый мир',
-            author: 'aldous Huxly',
-            text: 'о дивный новый мир'
-          },
-          {
-            img: imgb4,
-            title: 'Richard Bach',
-            author: 'Richard Bach',
-            text: 'алиса в стране чудес'
-          },
-          {
-            img: imgb4,
-            title: 'Richard Bach',
-            author: 'Richard Bach',
-            text: 'алиса в стране чудес'
-          },
-          {
-            img: imgb4,
-            title: 'Richard Bach',
-            author: 'Richard Bach',
-            text: 'алиса в стране чудес'
-          },
-          {
-            img: imgb4,
-            title: 'Richard Bach',
-            author: 'Richard Bach',
-            text: 'алиса в стране чудес'
-          }
-      ]
-
-      
     const [modal , setModal] = useState({
         visible: false
     })
@@ -75,15 +22,7 @@ const Search = () => {
         setModal({visible: true});
         setMData(el)
     }
-
-    const post = arr?.filter((e) => {
-        if (!searchValue === null) {
-          return e
-        } else if (e.title?.toLowerCase().includes(searchValue.toLowerCase()) || e.text?.toLowerCase().includes(searchValue.toLowerCase())) {
-          return e
-        }
-      })
-
+ 
     return (
         <>
             <Modal show={modal.visible} hide={hide} data={mData} />
@@ -100,13 +39,19 @@ const Search = () => {
                     <div className={styles.list__data}>
                         <ul>
                             {
-                                post?.map((el,index) => {
+                              book?.filter((e) => {
+                                  if (!searchValue === null) {
+                                    return e
+                                  } else if (e.title?.toLowerCase().includes(searchValue.toLowerCase()) || e.text?.toLowerCase().includes(searchValue.toLowerCase())) {
+                                    return e
+                                  }
+                                }).map((el,index) => {
                                     return (
                                         <li key={index} onClick={() => show(el)}>
-                                            <Image src={el.img.src} width={150} height={150} alt="imgsdvdsb" />
+                                            <Image src={el.image} width={150} height={150} alt="imgsdvdsb" />
                                             <div className={styles.list_cat_info}>
                                                 <p>{el.author}</p>
-                                                <span>{el.title}</span>
+                                                <span>{el.name}</span>
                                             </div>
                                         </li>
                                     )

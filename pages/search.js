@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useEffect , useState} from 'react'
 import Head from 'next/head'
 import Sidebar from '../components/Sidebar.js' 
 import Main from '../components/Search.js'
+import http from '../http.js'
 
-const search = () => {
+const Search = ({book}) => {
+// const [state, setstate] = useState([])
     return (
         <>
         <Head>
@@ -13,10 +15,18 @@ const search = () => {
         </Head>
             <Sidebar />
             <section className="home-section">
-                <Main />
+                <Main book={book.books} />
             </section>
         </>
     );
 }
 
-export default search;
+export default Search;
+
+export async function getStaticProps(context) {
+    const response = await fetch('https://englishapi.delphi.school/api/book');
+    const book  = await response.json()
+    return {
+      props: {book}, // will be passed to the page component as props
+    }
+}

@@ -64,7 +64,7 @@ export default function Home({book , film}) {
                 <span>
                     Delphi School
                 </span>
-                <Link href="/search"><Image src={searchIcon} alt="search" /></Link>
+                {/* <Link href="/search"><Image src={searchIcon} alt="search" /></Link> */}
             </div>
             <Modal show={modal.visible} hide={hide} data={mData} />
             <div className={styles.main}>            
@@ -73,7 +73,7 @@ export default function Home({book , film}) {
                     <div className={styles.book__wrapper}>
                         <div className={styles.head__colection}>
                             <span>Книги</span>
-                            <Link href="/search">Ещё</Link>
+                            {/* <Link href="/search">Ещё</Link> */}
                         </div>
                         <div className={styles.slider__wrapper}> 
                             <Swiper {...params}>
@@ -85,8 +85,8 @@ export default function Home({book , film}) {
                                                 <div className={styles.img_slide} style={{background: `url(${el.image})`}}>
                                                     {/* <Image src={el.img} alt="imgb" /> */}
                                                 </div>
-                                                <p>{el.author}</p>
-                                                <span>{el.name}</span>
+                                                <p>{el.author.substr(0, 18)}</p>
+                                                <span>{el.name.substr(0, 18)}</span>
                                             </div>
                                         </div>  
                                     )

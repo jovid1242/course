@@ -8,7 +8,7 @@ const Index = ({book, film}) => {
         <>
         <Head>
             <meta keywords="course, english, course1" ></meta>
-            <title>Курс</title>
+            <title>Delphi School</title>
             <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet' />
         </Head>
             <Sidebar />
