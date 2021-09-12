@@ -1,8 +1,7 @@
 import React from 'react'
 import '../styles/Course.module.scss'
 import Image from 'next/image' 
-import Link from 'next/link'
-import http from '../http.js'
+import Link from 'next/link' 
 import styles from '../styles/Courses.module.scss' 
 
 export default function Courses({courses}) {
@@ -30,7 +29,7 @@ export default function Courses({courses}) {
                                         <Link href={`/course/${el.id}`}>
                                             <a>
                                             <div className={styles.card__img}>
-                                                <p className={styles.card__text}> </p>
+                                                <p className={styles.card__text}>{el.name.substr(0, 60)}</p>
                                                 <Image
                                                 src={randomIcon()}
                                                 alt="Picture of the author"
@@ -39,7 +38,7 @@ export default function Courses({courses}) {
                                                 crossOrigin
                                             />
                                             </div>                                        
-                                            <span>{el.name.substr(0, 180) + '...'}</span>
+                                            {/* <span>{el?.description?.substr(0, 180) + '...'}</span> */}
                                             <div className="">
                                                 <button className={styles.start_course}>
                                                     {el.lessionCount} Уроков

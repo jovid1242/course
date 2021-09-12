@@ -38,12 +38,22 @@ const ModalCategory = ({show, hide, data, categoryData, showM}) => {
                     <div className="container">
                         <div className={styles.box1}>
                             <div className={styles.modal_c_img}>
-                                <span>{data.text}</span>
-                                <Image src={data.img.src} width={150} height={150} alt="imgsdvdsb" />
+                                <span>{data.name}</span>
+                                <Image src={data.image} width={150} height={150} alt="imgsdvdsb" />
                             </div> 
                         </div> 
+                        <div className={styles.links_tg}>
+                            <Link href={data.link} target="_blank">
+                                <a>
+                                    <button>Скачать</button>
+                                </a>
+                            </Link>
+                        </div>
                         <div className={styles.list_cat_data}>
-                            <ul>
+                        {
+                            data.description
+                        }
+                            {/* <ul>
                                 {
                                     categoryData?.map((el ,index) => {
                                         return (
@@ -57,7 +67,7 @@ const ModalCategory = ({show, hide, data, categoryData, showM}) => {
                                         )
                                     })
                                 }
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                     }

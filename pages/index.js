@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Sidebar from '../components/Sidebar.js' 
 import Home from '../components/Home.js' 
 
-const Index = () => {
+const Index = ({book, film}) => {
     return (
         <>
         <Head>
@@ -13,10 +13,21 @@ const Index = () => {
         </Head>
             <Sidebar />
             <section className="home-section">
-                <Home />
+                <Home book={book.books} film={film.films} />
             </section>
         </>
     );
 }
 
 export default Index;
+
+export async function getStaticProps(context) {
+    // let data = []
+    const response = await fetch('https://englishapi.delphi.school/api/book');
+    const book  = await response.json()
+    const resFilm = await fetch('https://englishapi.delphi.school/api/film');
+    const film  = await resFilm.json()
+    return {
+      props: {book, film}, // will be passed to the page component as props
+    }
+}

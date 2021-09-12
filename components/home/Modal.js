@@ -17,20 +17,20 @@ export default function Modal({show, hide, data}) {
                         <div className="container">
                             <div className={styles.box1}>
                                 <div className={styles.modal__img}>
-                                    <Image src={data.img.src} width={150} height={150} alt="imgsdvdsb" />
+                                    <Image src={data.image} width={150} height={150} alt="imgsdvdsb" />
                                 </div>
                                 <div className={styles.info__content}>
                                     <p>
                                         {data.author}
                                     </p>
                                     <span>
-                                        {data.title}
+                                        {data.name}
                                     </span>
                                 </div>
                             </div>
                             <div className={styles.modal__btns}>
                             {/* https://drive.google.com/file/d/1fT45dPykTx0lr0VGf1IzJcOGH2xh3KaZ/view?usp=sharing */}
-                                <Link href="https://drive.google.com/file/d/1fT45dPykTx0lr0VGf1IzJcOGH2xh3KaZ/view?usp=sharing" download>
+                                <Link href={data.file} target="_blank" download>
                                     <a download>
                                         <button>Скачать</button>
                                     </a>
@@ -39,7 +39,7 @@ export default function Modal({show, hide, data}) {
                             <div className="moda__text">
                                 <span>
                                 {
-                                    data.text
+                                    data.description
                                 }                                
                                 </span>
                             </div>

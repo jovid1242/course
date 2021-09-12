@@ -14,7 +14,7 @@ import imgb4 from '../assets/img/4.jpg'
 import Colection from './home/Colection';
 import Stories from './home/Stories';
 
-export default function Home() {
+export default function Home({book , film}) {
     const params = {
         slidesPerView: 3,
         spaceBetween: 10,
@@ -41,58 +41,7 @@ export default function Home() {
             spaceBetween: 10
           }
         }
-      }
-
-      const slider_r = [
-        {
-          img: imgb2,
-          title: 'великий гэтсби',
-          author: 'F.Scott fitzgerald',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores!'
-        },
-          {
-            img: imgb,
-            title: 'Чацка по имени джонатан',
-            author: 'Richard Bach',
-            text: 'Чацка по имени джонатан'
-          },
-          {
-            img: imgb3,
-            title: 'о дивный новый мир',
-            author: 'aldous Huxly',
-            text: 'о дивный новый мир'
-          },
-          {
-            img: imgb4,
-            title: 'Richard Bach',
-            author: 'Richard Bach',
-            text: 'алиса в стране чудес'
-          },
-          {
-            img: imgb2,
-            title: 'великий гэтсби',
-            author: 'F.Scott fitzgerald',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quaerat consequatur consectetur itaque nulla cum harum nobis. Molestiae voluptate quod dolorem amet? Laboriosam eius quis distinctio aspernatur aliquam nesciunt maiores!'
-          },
-            {
-              img: imgb,
-              title: 'Чацка по имени джонатан',
-              author: 'Richard Bach',
-              text: 'Чацка по имени джонатан'
-            },
-            {
-              img: imgb3,
-              title: 'о дивный новый мир',
-              author: 'aldous Huxly',
-              text: 'о дивный новый мир'
-            },
-            {
-              img: imgb4,
-              title: 'Richard Bach',
-              author: 'Richard Bach',
-              text: 'алиса в стране чудес'
-            }
-      ] 
+      } 
 
     const [modal , setModal] = useState({
         visible: false
@@ -129,15 +78,15 @@ export default function Home() {
                         <div className={styles.slider__wrapper}> 
                             <Swiper {...params}>
                             {
-                                slider_r?.map((el, index) => {
+                                book?.map((el, index) => {
                                     return (
                                         <div key={index}>
                                             <div className={styles.slide_cont} onClick={() => show(el)}>
-                                                <div className={styles.img_slide} style={{background: `url(${el.img.src})`}}>
+                                                <div className={styles.img_slide} style={{background: `url(${el.image})`}}>
                                                     {/* <Image src={el.img} alt="imgb" /> */}
                                                 </div>
                                                 <p>{el.author}</p>
-                                                <span>{el.title}</span>
+                                                <span>{el.name}</span>
                                             </div>
                                         </div>  
                                     )
@@ -146,8 +95,8 @@ export default function Home() {
                             </Swiper>
                         </div>
                     </div>  
-                    <Colection />
-                    <Stories />
+                    <Colection films={film} />
+                    {/* <Stories /> */}
                 </div>
             </div>
         </>
